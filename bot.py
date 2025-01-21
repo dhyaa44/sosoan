@@ -1,74 +1,141 @@
-import requests
-from eth_account import Account
-import json
-import random
+const { Builder, By, until } = require('selenium-webdriver');
+const readline = require('readline');
+const fs = require('fs');
 
-# Fungsi untuk membuat wallet Ethereum
-def generate_ethereum_wallet():
-    account = Account.create()
-    return account.address, account._private_key.hex()  # Gunakan _private_key, bukan privateKey
+const { Web3 } = require('web3');
+const web3 = new Web3();
 
-# Fungsi untuk login dan bind referral code
-def login_and_bind_referral(wallet_address, private_key, referral_code):
-    url_login = "https://sosovalue.com/exp"  # Ganti dengan URL login yang benar
-    url_bind_referral = "https://sosovalue.com/exp/bind_referral"  # Ganti dengan URL untuk binding referral code
-    
-    # Payload untuk login (misalnya wallet_address dan private_key, sesuaikan dengan yang diperlukan oleh situs)
-    payload_login = {
-        "address": wallet_address,
-        "privateKey": private_key,
-        "nonce": random.randint(100000, 999999)  # Nonce acak, sesuaikan jika diperlukan
+// Static API key for login request
+const STATIC_API_KEY = 'dXoriON31OO1UopGakYO9f3tX2c4q3oO7mNsjB2nJsKnW406';
+
+console.log(`
+========================
+| Auto Referral Centic |
+| @AirdropFamilyIdn    |
+========================
+`);
+
+function generateNonce() {
+  const nonce = Math.round(1e6 * Math.random());
+  return nonce;
+}
+
+function signMessage(privateKey, message) {
+  const account = web3.eth.accounts.privateKeyToAccount(privateKey);
+  return account.sign(message).signature;
+}
+
+async function login(privateKey) {
+  const account = web3.eth.accounts.privateKeyToAccount(privateKey);
+  const address = account.address;
+  const nonce = generateNonce();
+  const message = `I am signing my one-time nonce: ${nonce}.`;
+  const signature = await signMessage(privateKey, message);
+
+  const payload = {
+    address,
+    nonce,
+    signature
+  };
+
+  try {
+    const response = await axios.post('https://develop.centic.io/dev/v3/auth/login', payload, {
+      headers: { 'x-apikey': STATIC_API_KEY }
+    });
+
+    const apiKey = response.data.apiKey;
+    return { apiKey, address };
+  } catch (error) {
+    console.error('Login failed:', error.message);
+    return null;
+  }
+}
+
+// WebDriver function to bind referral
+async function bindReferralWithSelenium(referralCode, privateKey) {
+  let driver = await new Builder().forBrowser('chrome').build();
+  try {
+    // Open the referral page
+    await driver.get('https://sosovalue.com/exp');
+
+    // Wait for the form or elements to load
+    await driver.wait(until.elementLocated(By.id('referral-code-input')), 10000);
+
+    // Fill the referral code field
+    const referralInput = await driver.findElement(By.id('referral-code-input')); // Ganti dengan ID yang sesuai
+    await referralInput.sendKeys(referralCode);
+
+    // Submit the form
+    const submitButton = await driver.findElement(By.id('submit-button')); // Ganti dengan ID yang sesuai
+    await submitButton.click();
+
+    // Wait for some result (confirmation page or message)
+    await driver.wait(until.elementLocated(By.id('confirmation-message')), 10000);
+
+    console.log(`Referral code ${referralCode} successfully bound to the account`);
+
+    // Simpan private key ke file
+    fs.appendFileSync('privatekey.txt', `${privateKey}\n`);
+  } catch (error) {
+    console.error('Error during Selenium interaction:', error.message);
+  } finally {
+    await driver.quit();
+  }
+}
+
+// Main function
+async function runBot(referralCode, referralInterval) {
+  for (let i = 0; i < referralInterval; i++) {
+    const privateKeys = [];
+
+    const newAccount = web3.eth.accounts.create();
+    privateKeys.push(newAccount.privateKey);
+
+    for (const privateKey of privateKeys) {
+      if (!isValidPrivateKey(privateKey)) {
+        console.error(`Invalid private key: ${privateKey}`);
+        continue;
+      }
+
+      const account = web3.eth.accounts.privateKeyToAccount(privateKey);
+      const address = account.address;
+
+      const loginResult = await login(privateKey);
+      if (!loginResult) {
+        continue;
+      }
+
+      const { apiKey } = loginResult;
+      await bindReferralWithSelenium(referralCode, privateKey);
+    }
+  }
+}
+
+// Setup readline interface
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+// Ask user for referral code and interval
+rl.question('Masukkan kode Referral: ', (referralCode) => {
+  if (!referralCode) {
+    console.error('Kode Referral tidak valid.');
+    rl.close();
+    return;
+  }
+
+  rl.question('Masukkan jumlah Referral: ', (interasi) => {
+    const referralInterval = parseInt(interasi);
+    if (isNaN(referralInterval) || referralInterval <= 0) {
+      console.error('Interval Referral tidak valid.');
+      rl.close();
+      return;
     }
 
-    # Headers jika diperlukan (sesuaikan dengan yang diharapkan oleh situs)
-    headers = {
-        "Content-Type": "application/json",
-    }
-    
-    try:
-        # Melakukan request POST ke situs untuk login
-        response_login = requests.post(url_login, data=json.dumps(payload_login), headers=headers)
-        
-        if response_login.status_code == 200:
-            print(f"Login successful for wallet {wallet_address}")
-            
-            # Jika login berhasil, bind referral code
-            payload_referral = {
-                "address": wallet_address,
-                "referralCode": referral_code
-            }
-
-            # Mengirim request untuk binding referral code
-            response_referral = requests.post(url_bind_referral, data=json.dumps(payload_referral), headers=headers)
-            
-            if response_referral.status_code == 200:
-                print(f"Referral code {referral_code} successfully bound to wallet {wallet_address}")
-            else:
-                print(f"Failed to bind referral code for wallet {wallet_address}. Status Code: {response_referral.status_code}")
-                print("Response:", response_referral.text)
-        else:
-            print(f"Login failed for wallet {wallet_address}. Status Code: {response_login.status_code}")
-            print("Response:", response_login.text)
-    except Exception as e:
-        print(f"Error occurred: {str(e)}")
-
-# Fungsi utama untuk menjalankan proses
-def main():
-    # Meminta input dari user untuk referral code
-    referral_code = input("Masukkan Referral Code: ").strip()
-    
-    if not referral_code:
-        print("Referral code tidak valid.")
-        return
-
-    # Membuat wallet Ethereum
-    wallet_address, private_key = generate_ethereum_wallet()
-    print(f"Generated Wallet Address: {wallet_address}")
-    print(f"Private Key: {private_key}")
-    
-    # Melakukan login dan binding referral code
-    login_and_bind_referral(wallet_address, private_key, referral_code)
-
-# Menjalankan script
-if __name__ == "__main__":
-    main()
+    runBot(referralCode, referralInterval).then(() => {
+      console.log('Bot selesai dijalankan.');
+      rl.close();
+    });
+  });
+});
