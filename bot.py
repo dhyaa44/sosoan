@@ -7,7 +7,7 @@ import time
 # Fungsi untuk membuat wallet Ethereum
 def generate_ethereum_wallet():
     account = Account.create()
-    return account.address, account.privateKey.hex()
+    return account.address, account._private_key.hex()  # Gunakan _private_key, bukan privateKey
 
 # Fungsi untuk login dan bind referral code
 def login_and_bind_referral(wallet_address, private_key, referral_code):
