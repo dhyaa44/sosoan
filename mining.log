@@ -1,0 +1,47 @@
+[INIT] Agent: SuzakuSZN
+[INIT] Public key: 7SvhSq9vebSZbfXxTtruejVSPLK9YqE7T7ny5cyJEQpg
+[INIT] Mining started...
+
+============================================================
+[FETCH] Getting current task...
+  Task: TASK_1_mmvh48y0 | Type: hash_challenge | Difficulty: 3 | Epoch: 1
+  [SOLVE] Prefix: f96216c0, Matrix det: 2784432, Difficulty: 3
+  [FOUND] Nonce: 960 | Hash: 00037e8e8ec5c3ee... | Time: 0.00s
+  [SIGN] Solution signed (sig: e045bd3437f6b18fb7856819c38af4a1...)
+  [SUBMIT] Submitting proof...
+  [RESULT] {
+  "status": "accepted",
+  "peanut_earned": 500,
+  "vcus_credited": 1,
+  "epoch": 1,
+  "note": "Rewards accumulated. Credited to agent totals at epoch end."
+}
+  [EARNED] VCUs: 1 | Peanuts: 500
+
+  [TOTAL] Submitted: 1 | Accepted: 1
+
+============================================================
+[FETCH] Getting current task...
+  Task: TASK_1_mmvh58co | Type: hash_challenge | Difficulty: 3 | Epoch: 1
+  [SOLVE] Prefix: 0acf572f, Matrix det: 9587844, Difficulty: 3
+  [FOUND] Nonce: 4053 | Hash: 000343d17b90e26e... | Time: 0.00s
+  [SIGN] Solution signed (sig: 3645fbcbbb871774605e236e95d0490f...)
+  [SUBMIT] Submitting proof...
+  [RESULT] {
+  "status": "accepted",
+  "peanut_earned": 500,
+  "vcus_credited": 1,
+  "epoch": 1,
+  "note": "Rewards accumulated. Credited to agent totals at epoch end."
+}
+  [EARNED] VCUs: 1 | Peanuts: 500
+
+  [TOTAL] Submitted: 2 | Accepted: 2
+
+============================================================
+[FETCH] Getting current task...
+  Task: TASK_1_mmvh6620 | Type: hash_challenge | Difficulty: 3 | Epoch: 1
+  [SOLVE] Prefix: 7b46e677, Matrix det: 35819922, Difficulty: 3
+  [FOUND] Nonce: 9222 | Hash: 000f4c8255910896... | Time: 0.01s
+  [SIGN] Solution signed (sig: a81211e512844359b8c1e6c291b3e2d3...)
+  [SUBMIT] Submitting proof...
