@@ -346,3 +346,119 @@
 [03:51:23] [SuzakuAlpha:W0] ACCEPTED task=TASK_1_mmvi772w nonce=96761 +500P +1V solve=16ms submit=41522ms
 [03:51:28] [SuzakuBeta:W0] ACCEPTED task=TASK_1_mmvi78q0 nonce=47960 +500P +1V solve=3ms submit=44190ms
 [03:51:28] [SuzakuBeta:W2] ACCEPTED task=TASK_1_mmvi795o nonce=53195 +500P +1V solve=3ms submit=43916ms
+[03:54:51] ========================================================================
+[03:54:51] ========================================================================
+[03:54:51]   PEANUT MINING SYSTEM v2.0
+[03:54:51]   PEANUT MINING SYSTEM v2.0
+[03:54:51] ========================================================================
+[03:54:51] ========================================================================
+[03:54:51]   Agent: SuzakuSZN  pubkey: 7SvhSq9vebSZbfXxTtruejVSPLK9YqE7T7ny5cyJEQpg
+[03:54:51]   Agent: SuzakuSZN  pubkey: 7SvhSq9vebSZbfXxTtruejVSPLK9YqE7T7ny5cyJEQpg
+[03:54:51]   Agent: SuzakuAlpha  pubkey: 9Bo7HUrVwMRCcwDWsvNQkavko4feysEsDDmkoKT36C2N
+[03:54:51]   Agent: SuzakuAlpha  pubkey: 9Bo7HUrVwMRCcwDWsvNQkavko4feysEsDDmkoKT36C2N
+[03:54:51]   Agent: SuzakuBeta  pubkey: GRxzV4Ax8UsdzAdSND9fXwffRgWkkLpbuSNi7n1wbP83
+[03:54:51]   Agent: SuzakuBeta  pubkey: GRxzV4Ax8UsdzAdSND9fXwffRgWkkLpbuSNi7n1wbP83
+[03:54:51]   Workers/agent: 4  |  Total: 12
+[03:54:51]   Workers/agent: 4  |  Total: 12
+[03:54:51]   Delay: 0.3-1.2s adaptive  |  Retries: 3
+[03:54:51]   Delay: 0.3-1.2s adaptive  |  Retries: 3
+[03:54:51] ========================================================================
+[03:54:51] ========================================================================
+[03:54:51] 
+[03:54:51] 
+[03:54:51] [SYSTEM] 12 workers queued — full launch in ~18s
+
+[03:54:51] [SYSTEM] 12 workers queued — full launch in ~18s
+
+[03:54:52] [SuzakuSZN:W0] ONLINE (stagger=0.5s)
+[03:54:52] [SuzakuSZN:W0] ONLINE (stagger=0.5s)
+[03:54:53] [SuzakuSZN:W1] ONLINE (stagger=1.9s)
+[03:54:53] [SuzakuSZN:W1] ONLINE (stagger=1.9s)
+[03:54:54] [SuzakuSZN:W2] ONLINE (stagger=3.3s)
+[03:54:54] [SuzakuSZN:W2] ONLINE (stagger=3.3s)
+[03:54:56] [SuzakuSZN:W3] ONLINE (stagger=4.8s)
+[03:54:56] [SuzakuSZN:W3] ONLINE (stagger=4.8s)
+[03:54:58] [SuzakuAlpha:W0] ONLINE (stagger=6.5s)
+[03:54:58] [SuzakuAlpha:W0] ONLINE (stagger=6.5s)
+[03:54:59] [SuzakuAlpha:W1] ONLINE (stagger=8.0s)
+[03:54:59] [SuzakuAlpha:W1] ONLINE (stagger=8.0s)
+[03:55:00] [SuzakuAlpha:W2] ONLINE (stagger=9.2s)
+[03:55:00] [SuzakuAlpha:W2] ONLINE (stagger=9.2s)
+[03:55:02] [SuzakuAlpha:W3] ONLINE (stagger=10.6s)
+[03:55:02] [SuzakuAlpha:W3] ONLINE (stagger=10.6s)
+[03:55:03] [SuzakuBeta:W0] ONLINE (stagger=12.1s)
+[03:55:03] [SuzakuBeta:W0] ONLINE (stagger=12.1s)
+[03:55:05] [SuzakuBeta:W1] ONLINE (stagger=13.6s)
+[03:55:05] [SuzakuBeta:W1] ONLINE (stagger=13.6s)
+[03:55:06] [SuzakuBeta:W2] ONLINE (stagger=15.2s)
+[03:55:06] [SuzakuBeta:W2] ONLINE (stagger=15.2s)
+[03:55:08] [SuzakuBeta:W3] ONLINE (stagger=16.7s)
+[03:55:08] [SuzakuBeta:W3] ONLINE (stagger=16.7s)
+[03:55:21] ========================================================================
+[03:55:21] ========================================================================
+[03:55:21]   MINING DASHBOARD  |  Uptime: 0m 30s  |  Rate: 0.0 accepted/min
+[03:55:21]   MINING DASHBOARD  |  Uptime: 0m 30s  |  Rate: 0.0 accepted/min
+[03:55:21] ------------------------------------------------------------------------
+[03:55:21] ------------------------------------------------------------------------
+[03:55:21]   Agent             Submit  Accept  Fail   Rate   Peanuts   VCUs    Solve   Submit
+[03:55:21]   Agent             Submit  Accept  Fail   Rate   Peanuts   VCUs    Solve   Submit
+[03:55:21] ------------------------------------------------------------------------
+[03:55:21] ------------------------------------------------------------------------
+[03:55:21]   SuzakuSZN              0       0     0   0.0%         0      0    0.0ms      0ms
+[03:55:21]   SuzakuSZN              0       0     0   0.0%         0      0    0.0ms      0ms
+[03:55:21]   SuzakuAlpha            0       0     0   0.0%         0      0    0.0ms      0ms
+[03:55:21]   SuzakuAlpha            0       0     0   0.0%         0      0    0.0ms      0ms
+[03:55:21]   SuzakuBeta             0       0     0   0.0%         0      0    0.0ms      0ms
+[03:55:21]   SuzakuBeta             0       0     0   0.0%         0      0    0.0ms      0ms
+[03:55:21] ------------------------------------------------------------------------
+[03:55:21] ------------------------------------------------------------------------
+[03:55:21]   TOTAL                  0       0     0   0.0%         0      0
+[03:55:21]   TOTAL                  0       0     0   0.0%         0      0
+[03:55:21] ========================================================================
+[03:55:21] ========================================================================
+[03:55:27] [SuzakuSZN:W0] ACCEPTED task=TASK_1_mmvicnq0 nonce=43706 +500P +1V solve=0ms submit=30425ms
+[03:55:27] [SuzakuSZN:W0] ACCEPTED task=TASK_1_mmvicnq0 nonce=43706 +500P +1V solve=0ms submit=30425ms
+[03:55:28] [SuzakuSZN:W1] ACCEPTED task=TASK_1_mmvicoxa nonce=49346 +500P +1V solve=1ms submit=30750ms
+[03:55:28] [SuzakuSZN:W1] ACCEPTED task=TASK_1_mmvicoxa nonce=49346 +500P +1V solve=1ms submit=30750ms
+[03:55:29] [SuzakuSZN:W2] ACCEPTED task=TASK_1_mmvicq3t nonce=41127 +500P +1V solve=2ms submit=29898ms
+[03:55:29] [SuzakuSZN:W2] ACCEPTED task=TASK_1_mmvicq3t nonce=41127 +500P +1V solve=2ms submit=29898ms
+[03:55:31] [SuzakuSZN:W3] ACCEPTED task=TASK_1_mmvicrbd nonce=72010 +500P +1V solve=2ms submit=30060ms
+[03:55:31] [SuzakuSZN:W3] ACCEPTED task=TASK_1_mmvicrbd nonce=72010 +500P +1V solve=2ms submit=30060ms
+[03:55:32] [SuzakuAlpha:W0] ACCEPTED task=TASK_1_mmvics8j nonce=18441 +500P +1V solve=7ms submit=30297ms
+[03:55:32] [SuzakuAlpha:W0] ACCEPTED task=TASK_1_mmvics8j nonce=18441 +500P +1V solve=7ms submit=30297ms
+[03:55:33] [SuzakuAlpha:W1] ACCEPTED task=TASK_1_mmvicta7 nonce=29927 +500P +1V solve=1ms submit=29710ms
+[03:55:33] [SuzakuAlpha:W1] ACCEPTED task=TASK_1_mmvicta7 nonce=29927 +500P +1V solve=1ms submit=29710ms
+[03:55:35] [SuzakuAlpha:W2] ACCEPTED task=TASK_1_mmvicuij nonce=62255 +500P +1V solve=5ms submit=29820ms
+[03:55:35] [SuzakuAlpha:W2] ACCEPTED task=TASK_1_mmvicuij nonce=62255 +500P +1V solve=5ms submit=29820ms
+[03:55:37] [SuzakuAlpha:W3] ACCEPTED task=TASK_1_mmvicvkt nonce=36223 +500P +1V solve=7ms submit=30371ms
+[03:55:37] [SuzakuAlpha:W3] ACCEPTED task=TASK_1_mmvicvkt nonce=36223 +500P +1V solve=7ms submit=30371ms
+[03:55:38] [SuzakuBeta:W0] ACCEPTED task=TASK_1_mmvicwm1 nonce=54254 +500P +1V solve=2ms submit=29882ms
+[03:55:38] [SuzakuBeta:W0] ACCEPTED task=TASK_1_mmvicwm1 nonce=54254 +500P +1V solve=2ms submit=29882ms
+[03:55:39] [SuzakuBeta:W1] ACCEPTED task=TASK_1_mmvicxj9 nonce=84369 +500P +1V solve=2ms submit=29989ms
+[03:55:39] [SuzakuBeta:W1] ACCEPTED task=TASK_1_mmvicxj9 nonce=84369 +500P +1V solve=2ms submit=29989ms
+[03:55:41] [SuzakuBeta:W2] ACCEPTED task=TASK_1_mmvicyvs nonce=21017 +500P +1V solve=6ms submit=30246ms
+[03:55:41] [SuzakuBeta:W2] ACCEPTED task=TASK_1_mmvicyvs nonce=21017 +500P +1V solve=6ms submit=30246ms
+[03:55:42] [SuzakuBeta:W3] ACCEPTED task=TASK_1_mmvid01f nonce=62715 +500P +1V solve=3ms submit=29633ms
+[03:55:42] [SuzakuBeta:W3] ACCEPTED task=TASK_1_mmvid01f nonce=62715 +500P +1V solve=3ms submit=29633ms
+[03:55:51] ========================================================================
+[03:55:51] ========================================================================
+[03:55:51]   MINING DASHBOARD  |  Uptime: 1m 0s  |  Rate: 12.0 accepted/min
+[03:55:51]   MINING DASHBOARD  |  Uptime: 1m 0s  |  Rate: 12.0 accepted/min
+[03:55:51] ------------------------------------------------------------------------
+[03:55:51] ------------------------------------------------------------------------
+[03:55:51]   Agent             Submit  Accept  Fail   Rate   Peanuts   VCUs    Solve   Submit
+[03:55:51]   Agent             Submit  Accept  Fail   Rate   Peanuts   VCUs    Solve   Submit
+[03:55:51] ------------------------------------------------------------------------
+[03:55:51] ------------------------------------------------------------------------
+[03:55:51]   SuzakuSZN              4       4     0 100.0%      2000      4    1.3ms  30283ms
+[03:55:51]   SuzakuSZN              4       4     0 100.0%      2000      4    1.3ms  30283ms
+[03:55:51]   SuzakuAlpha            4       4     0 100.0%      2000      4    5.0ms  30049ms
+[03:55:51]   SuzakuAlpha            4       4     0 100.0%      2000      4    5.0ms  30049ms
+[03:55:51]   SuzakuBeta             4       4     0 100.0%      2000      4    3.3ms  29937ms
+[03:55:51]   SuzakuBeta             4       4     0 100.0%      2000      4    3.3ms  29937ms
+[03:55:51] ------------------------------------------------------------------------
+[03:55:51] ------------------------------------------------------------------------
+[03:55:51]   TOTAL                 12      12     0 100.0%      6000     12
+[03:55:51]   TOTAL                 12      12     0 100.0%      6000     12
+[03:55:51] ========================================================================
+[03:55:51] ========================================================================
