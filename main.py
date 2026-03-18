@@ -64,9 +64,11 @@ fh = logging.FileHandler(LOG_FILE, mode="a")
 fh.setFormatter(formatter)
 logger.addHandler(fh)
 
-sh = logging.StreamHandler(sys.stdout)
-sh.setFormatter(formatter)
-logger.addHandler(sh)
+# Only add stdout handler if running interactively (not backgrounded)
+if sys.stdout.isatty():
+    sh = logging.StreamHandler(sys.stdout)
+    sh.setFormatter(formatter)
+    logger.addHandler(sh)
 
 
 # ─── Stats Tracker ───────────────────────────────────────────────────────────
